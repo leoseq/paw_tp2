@@ -1,11 +1,19 @@
 <?php
 
 namespace App\core;
+use App\Models\ListaTurno;
 
 class Controller
 {
     public $view_data = [];
     public $messages = [];
+
+    public function __construct()
+    {
+
+    //    global $lista_turnos;
+    //    $lista_turnos = new ListaTurno;
+    }
 
     public function add_data($data)
     {

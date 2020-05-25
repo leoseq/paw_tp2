@@ -9,6 +9,8 @@ class ListaTurnoController extends Controller
 {
     public function index()
     {
+        $lista_turnos = new ListaTurno;
+
         include "views/index.view.php";
     }
 }

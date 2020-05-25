@@ -4,7 +4,7 @@
             <a href="/">Home</a>
         </li>
         <li>
-            <a href="/new_turno">Create new Task</a>
+            <a href="/new_turno">Nuevo Turno</a>
         </li>
     </ul>
 </nav>

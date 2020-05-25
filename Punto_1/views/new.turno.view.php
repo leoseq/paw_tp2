@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><?= $this->view_data['title'] ?></title>
+    <title>Sistema de Turnos Medicos</title>
 </head>
 <body>
     <header>
-        <h1><?= $this->view_data['nombre_lista'] ?></h1>
+        <h1>Alta de turno:</h1>
         <?php include 'views/nav.view.php'; ?>
     </header>
     <main>
-        <?php include 'views/new.task.form.view.php'; ?>
+        <?php include 'views/new.turno.form.view.php'; ?>
     </main>
 </body>
 </html>

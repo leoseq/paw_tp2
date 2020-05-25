@@ -6,14 +6,9 @@ class ListaTurno
 {
     public $turnos = [];
 
-    public function add_turno($turno) 
+    public function add_turno(Turno $turno) 
     {
-        $this->turnos[] = $turno;
-    }
-
-    public function cantidad_turnos() 
-    {
-        return count($this->turnos);
+        array_push($this->turnos, $turno);
     }
 
     public function crear_turno($datos) 
@@ -23,8 +18,4 @@ class ListaTurno
         return $turno;
     }
 
-    public function validar()
-    {
-        
-    }
 }

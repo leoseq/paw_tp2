@@ -1,27 +1,27 @@
 <form action="save_turno" method="POST">
 
-      <label for="name">Nombre del paciente*: </label>
-      <input type="text" name="name" id="name" placeholder="Nombre y Apellido" value="Leo Sequeira">
+      <label for="nombre">Nombre del paciente*: </label>
+      <input type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido" required>
       
       <br>
       
       <label for="email">Email*: </label>
-      <input type="email" name="email" id="email" placeholder="correo@mail.com" value="leo@mail.com">
+      <input type="email" name="email" id="email" placeholder="correo@mail.com" required>
       
       <br>
       
       <label for="telefono">Teléfono*: </label>
-      <input type="tel" id="telefono" name="telefono" placeholder="11-4545-8678" pattern="[0-9]{2-3}-[0-9]{5-8}" value="11-2222-2222">
+      <input type="tel" id="telefono" name="telefono" placeholder="11-4545-8678" pattern="[0-9]{2-3}-[0-9]{5-8}" required>
       
       <br>
       
       <label for="edad">Edad: </label>
-      <input type="number" id="edad" name="edad" min="1" max="130" value ="29">
+      <input type="number" id="edad" name="edad" min="1" max="130">
       
       <br>
       
       <label for="talla_calzado">Talla de calzado: </label>
-      <input type="number" id="talla_calzado" name="talla_calzado" min="20" max="45" value="40">
+      <input type="number" id="talla_calzado" name="talla_calzado" min="20" max="45" value="20">
       
       <br>
       
@@ -39,7 +39,7 @@
       <br>
       
       <label for="fecha_nacimiento">Fecha de nacimiento*: </label>
-      <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" min="1020-01-01" max="<?= date("d-m-Y") ?>" value="22-09-1990">
+      <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" min="1020-01-01" max="<?= date("d-m-Y") ?>" value="<?= date("d-m-Y") ?>" required>
       
       <br>
       
@@ -47,14 +47,14 @@
       <select name="color_pelo" id="color_pelo">
             <option value="negro">Negro</option>
             <option value="rubio">Rubio</option>
-            <option value="castaño">Castaño</option>
+            <option value="castanio">Castaño</option>
             <option value="pelirojo">Pelirojo</option>
       </select>
       
       <br>
       
       <label for="fecha_turno">Fecha del turno: </label>
-      <input type="date" name="fecha_turno" id="fecha_turno" value="<?= date("d-m-Y") ?>" min="1020-01-01" max="2020-12-31" value="<?= date("d-m-Y") ?>">
+      <input type="date" name="fecha_turno" id="fecha_turno" value="<?= date("d-m-Y") ?>" min="1020-01-01" max="2020-12-31" value="<?= date("d-m-Y") ?>" required>
       
       <br>
       
