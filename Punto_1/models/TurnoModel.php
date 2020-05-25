@@ -35,37 +35,57 @@ class Turno
     {
         $booleano = true;
 
+        // Validacion de Nombre
         if (empty($datos["nombre"])) {
             echo "El nombre es obligatorio... <br>";
             $booleano= false;
         }
-        if (!filter_var($datos["email"], FILTER_VALIDATE_EMAIL) || !isset($datos["email"]) ) {
-            echo "El formato del email no es correcto o es obligatorio... <br>";
+
+        // Validacion del Email
+        if (empty($datos["email"]) || (!filter_var($datos["email"], FILTER_VALIDATE_EMAIL))) {
+            echo "El email es obligatorio o el formato no es valido... <br>";
             $booleano= false;
         }
-        if (!filter_var($datos["telefono"], FILTER_VALIDATE_INT) || empty($datos["telefono"])) {
-            echo "No se ha indicado telefono o el formato no es correcto <br>";
+
+        // Validacion del Telefono
+        if (empty($datos["telefono"])) {
+            echo "El numero de telefono es obligatorio... <br>";
             $booleano= false;
         }
-        if (!filter_var($datos["edad"], FILTER_VALIDATE_INT) || $datos["edad"]<1 || $datos["edad"]>131) {
-            echo "El formato de la edad no es correcto <br>";
+
+        // Validacion de la Edad
+        if ((!filter_var($datos["edad"], FILTER_VALIDATE_INT)) || ($datos["edad"]<1 || $datos["edad"]>131)) {
+            echo "El formato de la edad no es valido... <br>";
             $booleano= false;
         }
-        if (!filter_var($datos["talla_calzado"], FILTER_VALIDATE_INT) || $datos["talla_calzado"]>45 || $datos["talla_calzado"]<20) {
-            echo "el formato de la talla del calzado no es correcto <br>";
+
+        // Validacion de la talla del calzado
+        if (($datos["talla_calzado"]>45 || $datos["talla_calzado"]<20) || (!filter_var($datos["talla_calzado"], FILTER_VALIDATE_INT))) {
+            echo "El formato de la talla del calzado no es valido... <br>";
             $booleano= false;
         }
-        if (!filter_var($datos["altura"], FILTER_VALIDATE_INT) || $datos["altura"]>200 || $datos["altura"]<100) {
-            echo "el formato de la altura no es correcto <br>";
+
+        // Validacion de la altura
+        if ($datos["altura"]>2.00 || $datos["altura"]<0.00) {
+            echo "El formato de la altura no es valido... <br>";
             $booleano= false;
         }
+
+        // Validacion del color de pelo
         if ($datos["color_pelo"] != "negro" && $datos["color_pelo"] != "rubio" && $datos["color_pelo"] != "castanio" && $datos["color_pelo"] != "pelirrojo") {
-            echo "No se ha indicado color de pelo(morocho,rubio,colorado,casta&ntilde;o) o el formato no es correcto <br>";
+            echo "El color de pelo ingresado no se corresponde con los colores validos... <br>";
             $booleano= false;
         }
-        $pattern="/^([0][8-9]|[1][0-7])[\:]([0-5][0-9])$/";
-        if (empty($datos["horario_turno"]) || !preg_match($pattern, $datos["horario_turno"])) {
-            echo "No se ha indicado el horario o el formato no es correcto <br>";
+
+        // Validacion de la fecha del turno
+        if (empty($datos["fecha_turno"])) {
+            echo "La fecha_turno es obligatorio... <br>";
+            $booleano= false;
+        }
+
+        // Validacion del horario del turno
+        if (empty($datos["horario_turno"])) {
+            echo "El horario del turno es obligatorio... <br>";
             $booleano= false;
         }
 

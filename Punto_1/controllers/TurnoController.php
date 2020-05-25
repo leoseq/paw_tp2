@@ -16,28 +16,6 @@ class TurnoController extends Controller
     {
         $lista_turnos = new ListaTurno;
 
-        $nombre = $_POST["nombre"];
-        $email = $_POST["email"];
-        $telefono = $_POST["telefono"];
-        $edad = $_POST["edad"];
-        $talla_calzado = $_POST["talla_calzado"];
-        $altura = $_POST["altura"];
-        $fecha_nacimiento = $_POST["fecha_nacimiento"];
-        $color_pelo = $_POST["color_pelo"];
-        $fecha_turno = $_POST["fecha_turno"];
-        $hora_turno = $_POST["hora_turno"];
-       /* 
-        echo 'Nombre: '.$nombre.'<br>';
-        echo 'Email: '.$email.'<br>';
-        echo 'Telefono: '.$telefono.'<br>';
-        echo 'Edad: '.$edad.'<br>';
-        echo 'Talla: '.$talla_calzado.'<br>';
-        echo 'Altura: '.$altura.'<br>';
-        echo 'Fecha Nacimiento: '.$fecha_nacimiento.'<br>';
-        echo 'Color de Pelo: '.$color_pelo.'<br>';
-        echo 'Fecha de Turno: '.$fecha_turno.'<br>';
-        echo 'Hora de Turno: '.$hora_turno.'<br>';
-*/
         $datos = [];        
         $datos['nombre'] = $_POST["nombre"];
         $datos['email'] = $_POST["email"];
@@ -52,7 +30,6 @@ class TurnoController extends Controller
         
         $lista_turnos->crear_turno($datos);
         
-
         include "views/index.view.php";
     }
 }
