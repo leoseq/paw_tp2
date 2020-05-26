@@ -11,8 +11,5 @@
     <main>
         <?php include 'views/resumen.view.php'; ?>
     </main>
-    <footer>
-        
-    </footer>
 </body>
 </html>

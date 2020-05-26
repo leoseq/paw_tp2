@@ -28,8 +28,10 @@ class TurnoController extends Controller
         $datos['fecha_turno'] = $_POST["fecha_turno"];
         $datos['hora_turno'] = $_POST["hora_turno"];
         
-        $lista_turnos->crear_turno($datos);
+        $message = $lista_turnos->crear_turno($datos);
         
+        $this->add_message($message);            
+
         include "views/index.view.php";
     }
 }

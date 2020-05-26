@@ -27,8 +27,6 @@ class Turno
         $this->color_pelo = $datos['color_pelo'];
         $this->fecha_turno = $datos['fecha_turno'];
         $this->hora_turno = $datos['hora_turno'];
-
-        $this->validar_datos($datos);
     }
 
     public function validar_datos($datos)
@@ -85,29 +83,29 @@ class Turno
         }
 
         // Validacion del horario del turno
-        if (empty($datos["horario_turno"])) {
+        if (empty($datos["hora_turno"])) {
             $message .= "El horario del turno es obligatorio... <br>";
             $booleano= false;
         }
 
         //SI TODOS LOS CAMPOS ESTAN OK
         if ($booleano) {
-        
-            $message .= "SE REGISTRO EL TURNO CORRECTAMENTE<br>";
-            $message .= "Gracias " .$this->nombre. " la fecha de su turno es el " .$this->fecha_turno. " a las " .$this->hora_turno. " horas. Lo esperamos <br>";
-            $message .= "----------------------------------------------------------------------------------------------------------------------------- <br>";
-            $message .= "Nombre: " .$this->nombre. "<br>";
-            $message .= "Email: " .$this->email. "<br>";
-            $message .= "Telefono: " .$this->telefono. "<br>";
-            $message .= "Fecha nacimiento: " .$this->fecha_nacimiento. "<br>";
-            $message .= "Fecha del turno: " .$this->fecha_turno. "<br>";
-            $message .= "Horario del turno: " . $this->hora_turno. "<br>";
-            $message .= "----------------------------------------------------------------------------------------------------------------------------- <br>";
+            
+            $message .= "==================================================================<br>";
+            $message .= "| SE REGISTRO EL TURNO CORRECTAMENTE <br>";
+            $message .= "==================================================================<br>";
+            $message .= "| Nombre del Paciente: " .$this->nombre. "<br>";
+            $message .= "| Email: " .$this->email. "<br>";
+            $message .= "| Telefono: " .$this->telefono. "<br>";
+            $message .= "| Fecha nacimiento: " .$this->fecha_nacimiento. "<br>";
+            $message .= "==================================================================<br>";
+            $message .= "| Fecha del turno: " .$this->fecha_turno. "<br>";
+            $message .= "| Horario del turno: " . $this->hora_turno. "<br>";
+            $message .= "==================================================================<br>";
 
         } else {
             $message .= "NO SE REGISTRO EL TURNO <br>";
         }
         return $message;
     }
-
 }

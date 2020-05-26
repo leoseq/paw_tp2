@@ -15,7 +15,8 @@ class ListaTurno
     {
         $turno = new Turno($datos);
         $this->add_turno($turno);
-        return $turno;
-    }
+        $message = $turno->validar_datos($datos);
 
+        return $message;
+    }
 }
