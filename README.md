@@ -10,12 +10,13 @@
 El ejercicio se encuentra en la carpeta: *Punto_1*.
 
 #### ¿Por qué cree usted que se requiere validar los datos en ambos extremos de la comunicación?
-Las validaciones del lado del front end son importantes por la experiencia que el usuario tiene con la aplicación. Una aplicacion con indicaciones sobre posibles valores de un determinado campo termina siendo mucho mas amigable que otra que no le indica al usuario el porque uncampo no es válido.
+Las validaciones del lado del front end son importantes por la experiencia que el usuario tiene con la aplicación. Una aplicacion con indicaciones sobre posibles valores de un determinado campo termina siendo mucho mas amigable que otra que no le indica al usuario el porque un campo no es válido.
 <p>
-En cuanto a las validacione del lado del back end...
+En cuanto a las validacione del lado del back end siempre se deben realizar debido a que son datos de entrada del lado del usuario y nunca se sabe que tan malisioso puede ser para nuestra aplicacion.
 
 * * *
 #### 2. 
+El ejercicio se encuentra en la carpeta: *Punto_2*.
 
 * * *
 #### 3. 
