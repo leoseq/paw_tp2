@@ -16,7 +16,8 @@ En cuanto a las validacione del lado del back end siempre se deben realizar debi
 
 
 * * *
-#### 2. 
+#### 2. Extienda el ejercicio anterior para que al enviar el formulario mediante el método POST se muestre al usuario un resumen del turno.
+
 El ejercicio se encuentra en la carpeta: *Punto_2*.
 
 
@@ -31,10 +32,10 @@ El ejercicio se encuentra en la carpeta: *Punto_3*.
 
 El ejercicio se encuentra en la carpeta: *Punto_4*.
 
-####¿Qué sucede si 2 usuarios cargan imágenes con el mismo nombre de imagen? 
+#### ¿Qué sucede si 2 usuarios cargan imágenes con el mismo nombre de imagen? 
 
 
-####¿Qué mecanismo implementar para evitar que un usuario sobrescriba una imagen con el mismo nombre?
+#### ¿Qué mecanismo implementar para evitar que un usuario sobrescriba una imagen con el mismo nombre?
 
 
 * * *
