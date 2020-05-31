@@ -1,11 +1,6 @@
 <?php
 
-
 include 'setup.php';
-
-use App\models\Turno;
-use App\models\Serializar;
-
 
 try{
     $router->direct($request);
